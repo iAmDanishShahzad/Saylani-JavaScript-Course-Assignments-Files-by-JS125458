@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 02, Question 08 - JavaScript by Sir Ishaq Bhojani</title>
+</head>
+
+<body>
+    <p>
+        This file contains the solution for the Assignment02, Question08 from JavaScript course by Sir Ishaq Bhojani.
+        <hr>
+    </p>
+
+    <!-- === store each property of an object in local storage and then retrieve and return the object=== -->
+
+    <button onclick="storeObject()">click to store the object's key values in local storage</button> <br>
+    <button onclick="retrieveObject()">click to retrieve object from local storage in console</button>
+
+    <script>
+
+        // object
+        let student = {
+            firstName: "Danish",
+            lastName: "Shahzad",
+            cnic: "12345-6789012-3",
+            identificationMark: "nil",
+            contactNumber: "0312-3456789",
+            height: 171,
+            eyesColor: "black",
+            hairColor: "brown",
+
+            speak: function (sentence) {
+                return sentence + this.firstName + " " + this.lastName;
+            }
+        };
+
+        function storePropertyValuesInLocalStorage(object) {
+            for (const property in object) {
+                localStorage.setItem(property, object[property]);
+            }
+        };
+
+        function storeObject() {
+            storePropertyValuesInLocalStorage(student);
+        };
+
+        function retrieveObjectFromLocalStorage() {
+            let std = {
+                firstName: localStorage.getItem("firstName"),
+                lastName: localStorage.getItem("lastName"),
+                cnic: localStorage.getItem("cnic"),
+                identificationMark: localStorage.getItem("identificationMark"),
+                contactNumber: localStorage.getItem("contactNumber"),
+                height: localStorage.getItem("height"),
+                eyesColor: localStorage.getItem("eyesColor"),
+                hairColor: localStorage.getItem("hairColor"),
+
+                speak: localStorage.getItem("speak")
+            };
+
+            return std;
+        };
+
+        function retrieveObject() {
+            let object = retrieveObjectFromLocalStorage();
+            console.log(object);
+        }
+
+    </script>
+
+    <!-- ========================== assignment solution main part ============================== -->
+</body>
+
+</html>
