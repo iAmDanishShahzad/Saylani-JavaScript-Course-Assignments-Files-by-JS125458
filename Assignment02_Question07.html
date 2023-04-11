@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 02, Question 01 - JavaScript by Sir Ishaq Bhojani</title>
+</head>
+
+<body>
+    <p>
+        This file contains the solution for the Assignment02, Question06 from JavaScript course by Sir Ishaq Bhojani.
+        <hr>
+    </p>
+
+    <!-- ========================== assignment solution main part ============================== -->
+    <!-- ====================== storing an object in local storage ======================== -->
+
+    <button onclick="myFunction()">click to fetch values from the local storage</button>
+
+    <script>
+
+        function fetchFromLocalStorage(key) {
+            let dataFetched = localStorage.getItem(key);
+            let studentData = JSON.parse(dataFetched);
+
+            console.log(studentData);
+        }
+
+        function myFunction() {
+            fetchFromLocalStorage("studentData");
+
+        }
+
+    </script>
+
+    <!-- ========================== assignment solution main part ============================== -->
+</body>
+
+</html>
