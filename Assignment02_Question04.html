@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 02, Question 01 - JavaScript by Sir Ishaq Bhojani</title>
+</head>
+
+<body>
+    <p>
+        This file contains the solution for the Assignment02, Question04 from JavaScript course by Sir Ishaq Bhojani.
+        <hr>
+    </p>
+
+    <!-- ========================== assignment solution main part ============================== -->
+    <!-- ====================== add a paragraph element to an html page ======================== -->
+
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <button onclick="myFunction()">Append</button>
+
+    <script>
+        function myFunction() {
+            let stringForNextItem = prompt("Enter the text for the next list item: ");
+
+            let listItemElement = document.createElement("li");
+            let textNode = document.createTextNode(stringForNextItem);
+            listItemElement.appendChild(textNode);
+
+            document.getElementById("myList").appendChild(listItemElement);
+        }
+    </script>
+
+    <!-- ========================== assignment solution main part ============================== -->
+</body>
+
+</html>
