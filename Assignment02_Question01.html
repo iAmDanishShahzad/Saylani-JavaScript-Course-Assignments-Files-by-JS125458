@@ -11,7 +11,26 @@
 <body>
     <p>
         This file contains the solution for the Assignment02, Question01 from JavaScript course by Sir Ishaq Bhojani.
+        <hr>
     </p>
+
+    <!-- ========================== assignment solution main part ============================== -->
+
+    <script>
+        function mainFunction() {                       //  function containing closure
+            return function closureFunction(number) {   //  closure function with a number as argument
+                result = number + 5;                    //  function adds 5 to the argument passed
+                console.log(result);                    //  displays the result on console
+                document.write(result);                 //  displays the result on html document
+            };
+        };
+
+        let number = +prompt("Enter a number to add five to: ");
+        let addFive = mainFunction();                   //  call to main function
+        addFive(number);                                //  call to closure function
+    </script>
+
+    <!-- ========================== assignment solution main part ============================== -->
 </body>
 
 </html>
