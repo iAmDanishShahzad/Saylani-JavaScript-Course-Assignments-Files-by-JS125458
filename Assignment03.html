@@ -5,8 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 03 - JavaScript by Sir Ishaq Bhojani</title>
+    <script src="./Assignment03.js"></script>
+    <style>
+        #searchArea table {
+            /* border: 2px solid red; */
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        #searchArea table tr {
+            display: flex;
+            justify-content: space-between;
+        }
+        #searchArea table tr td {
+            /* border: 1px solid black; */
+            width: 100%;
+            /* margin: 0px 10%; */
+        }
+        #searchArea table tr td label {
+            color: grey;
+            font-weight: bold;
+            
+        }
+        #searchArea table tr td select {
+            width: 100%;
+        }
+
+        #resultArea table {
+            border: 1px solid black;
+            width: 100%;
+        }
+        #resultAreaRowHeading {
+            /* border: 1px solid black; */
+            /* height: 30px; */
+            /* margin: 10px; */
+        }
+        #resultAreaColumnOne {
+            width: 10%;
+        }
+        #resultAreaColumnTwo {
+            width: 70%;
+        }
+        #resultAreaColumnThree {
+            width: 20%;
+        }
+    </style>
 </head>
 <body>
-    
+    <header></header>
+    <main>
+        <section id="searchArea">
+            <table class="searchTable">
+                <tr id="searchTableFirstRow">
+                    <td class="listContainer">
+                        <label for="movieGenre">Genre</label>
+                        <br>
+                        <select name="movieGenre" id="movieGenre">
+                            <option value="all">All</option>
+                            <option value="action">Action</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="animation">Animation</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="crime">Crime</option>
+                            <option value="drama">Drama</option>
+                            <option value="family">Family</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="music">Music</option>
+                            <option value="romance">Romance</option>
+                            <option value="scienceFiction">Science Fiction</option>
+                            <option value="thriller">Thriller</option>
+                        </select>
+                    </td>
+                    <td class="listContainer">
+                        <label for="movieYear">Year</label>
+                        <br>
+                        <select name="movieYear" id="movieYear">
+                            <option value="all">All</option>
+                            <option value="2010">2010</option>
+                        </select>
+                    </td>
+                    <td class="listContainer">
+                        <label for="movieLanguage">Language</label>
+                        <br>
+                        <select name="movieLanguage" id="movieLanguage">
+                            <option value="all">All</option>
+                            <option value="english">English</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="searchTableSecondRow">
+                    <td class="listContainer">
+                        <label for="movieRating">Rating</label>
+                        <br>
+                        <select name="movieRating" id="movieRating">
+                            <option value="all">All</option>
+                            <option value="1">1</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="resultArea">
+            <table>
+                <tr id="resultAreaRowHeading">
+                    <td id="resultAreaColumnOne">Rank</td>
+                    <td id="resultAreaColumnTwo">Movie</td>
+                    <td id="resultAreaColumnThree">Year</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer></footer>
 </body>
 </html>
