@@ -1,4 +1,5 @@
 (async function () {
+    // fetch JSON file contents into our JS file
     const fileHandle = await fetch("./data.json");
     const movies = await fileHandle.json();
 
